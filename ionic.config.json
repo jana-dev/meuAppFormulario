@@ -1,0 +1,7 @@
+{
+  "name": "meuAppFormulario",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
