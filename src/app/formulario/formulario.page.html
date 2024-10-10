@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>formulario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <div class="container-btn">
+    <ion-button class="btn-voltar" routerLink="/home">Voltar</ion-button>
+  </div>
+
+  <form (ngSubmit)="salvarDados()">
+    <ion-item>
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input [(ngModel)]="dados.nome" name="nome" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" [(ngModel)]="dados.email" name="email" required></ion-input>
+    </ion-item>
+
+    <ion-button class="btn-salvar" type="submit" class="ion-margin-top">Salvar</ion-button>
+  </form>
+</ion-content>

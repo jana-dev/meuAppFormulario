@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Listar usuários</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <div class="container-btn">
+    <ion-button class="btn-voltar" routerLink="/home">Voltar</ion-button>
+  </div>
+
+  <ion-list *ngIf="usuarios.length > 0; else noUsers">
+    <ion-item *ngFor="let usuario of usuarios">
+      <ion-label>
+        <h2>Nome: {{ usuario.nome }}</h2>
+        <p>Email: {{ usuario.email }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ng-template #noUsers>
+    <ion-text color="danger">
+      <p>Nenhum usuário cadastrado.</p>
+    </ion-text>
+  </ng-template>
+
+</ion-content>
